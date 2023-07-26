@@ -64,7 +64,7 @@ export default function OfferBanner() {
                         {theme.direction === "rt1" ? (
                             <KeyboardArrowLeft />
                         ) : (
-                            <KeyboardArrowLeft />
+                            <KeyboardArrowRight />
                         )}
                     </Button>
                 }

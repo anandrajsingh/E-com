@@ -117,7 +117,7 @@ function SearchBar() {
                             border: "none",
                         },
                         ".MuiSelect-standard": { border: "none" },
-                        ".MuiSelect-standard": {
+                        ".MuiSelect-iconStandard": {
                             color: "common.white", ml: theme.spacing(), display: "flex", justifyContent: "center"
                         },
                         ".MuiSelect-standard": {
