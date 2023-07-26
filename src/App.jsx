@@ -12,6 +12,8 @@ import AddForProfilePage from './components/AddForProfilePage';
 import ProfileInfo from './components/ProfileInfo';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import CheckoutSlice from './feature/checkout-slice';
+import Checkout from './pages/Checkout';
 
 function ProtectedRoute({ children }){
   const { user } = useAuth();
@@ -31,6 +33,7 @@ const router = createBrowserRouter(
           <Route index element={<AddForProfilePage/>}/>
           <Route index path='/profile/profile-info' element={<ProfileInfo/>}/>
         </Route>
+        <Route path='/checkout' element={<Checkout/>}/>
       </Route>
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
