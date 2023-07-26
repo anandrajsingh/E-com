@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { store } from "./store";
 import AuthProvider, { useAuth } from './firebase/Auth';
 import Layout from "./components/Layout";
+import Home from './pages/Home';
 
 function ProtectedRoute({ children }){
   const { user } = useAuth();
@@ -18,7 +19,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<Layout />}>
-        
+        <Route index element={<Home/>}/>
       </Route>
     </>
   )
