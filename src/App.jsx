@@ -6,6 +6,7 @@ import { store } from "./store";
 import AuthProvider, { useAuth } from './firebase/Auth';
 import Layout from "./components/Layout";
 import Home from './pages/Home';
+import Cart from './pages/Cart';
 
 function ProtectedRoute({ children }){
   const { user } = useAuth();
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
     <>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home/>}/>
+        <Route path='/cart' element={<Cart/>}/>
       </Route>
     </>
   )

@@ -14,11 +14,12 @@ import { useTheme } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../feature/cart-slice";
 import { useNavigate } from "react-router-dom";
+import { getSubTotal } from "../utils";
 
 export default function Cart() {
     const cart = useSelector((state) => state.cart?.value);
     const theme = useTheme();
-    const subTotal = getSubtotal(cart).toFixed(2);
+    const subTotal = getSubTotal(cart).toFixed(2);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -100,7 +101,7 @@ export default function Cart() {
                                             </Box>
                                             <Box>
                                                 <Typography variant="h5" paragraph>
-                                                    {getSubtotal([{ product, quantity }])?.toFixed(2)}
+                                                    {getSubTotal([{ product, quantity }])?.toFixed(2)}
                                                 </Typography>
                                             </Box>
                                         </CardContent>
@@ -134,7 +135,7 @@ export default function Cart() {
                 <Box sx={{ width: "100%" }}>
                     <Card sx={{ padding: 2, display: "flex", flexDirection: "column", gap: 2 }}>
                         <Typography variant="h4">Subtotal</Typography>
-                        <Typography variant="h5">{subtotal}</Typography>
+                        <Typography variant="h5">{subTotal}</Typography>
                         {subTotal > 0 ? (
                             <Button variant="contained" onClick={goToCheckoutPage}>
                                 Buy now
