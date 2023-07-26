@@ -11,6 +11,7 @@ import Profile from './pages/Profile';
 import AddForProfilePage from './components/AddForProfilePage';
 import ProfileInfo from './components/ProfileInfo';
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 function ProtectedRoute({ children }){
   const { user } = useAuth();
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
         </Route>
       </Route>
       <Route path='/login' element={<Login/>}/>
+      <Route path='/register' element={<Register/>}/>
     </>
   )
 );
