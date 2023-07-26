@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Profile from './pages/Profile';
 import AddForProfilePage from './components/AddForProfilePage';
+import ProfileInfo from './components/ProfileInfo';
 
 function ProtectedRoute({ children }){
   const { user } = useAuth();
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/profile' element={<Profile/>}>
           <Route index element={<AddForProfilePage/>}/>
+          <Route index path='/profile/profile-info' element={<ProfileInfo/>}/>
         </Route>
       </Route>
     </>
