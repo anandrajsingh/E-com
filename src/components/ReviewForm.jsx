@@ -5,9 +5,8 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Grid from "@mui/material/Grid";
 import { useSelector } from "react-redux";
-import { getSubtotal } from "../utils";
+import { getSubTotal } from "../utils";
 import { useTheme } from "@mui/material";
-import { Box } from "@mui/material";
 
 export default function ReviewForm() {
     const cart = useSelector((state) => state.cart?.value);
@@ -38,14 +37,14 @@ export default function ReviewForm() {
                           },
                     }} primary={product.title} secondary={`Qty: ${quantity}`}/>
                     <Typography variant="body2">
-                        {getSubtotal([{product, quantity}]).toFixed(2)}
+                        {getSubTotal([{product, quantity}]).toFixed(2)}
                     </Typography>
                     </ListItem>
                 ))}
                 <ListItem sx={{py: 1, px: 0}}>
                     <ListItemText primary="Total"/>
                     <Typography variant="subtitle1" sx={{ fontWeight: 700}}>
-                        {getSubtotal(cart).toFixed(2)}
+                        {getSubTotal(cart).toFixed(2)}
                     </Typography>
                 </ListItem>
             </List>

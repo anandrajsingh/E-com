@@ -12,7 +12,6 @@ import AddForProfilePage from './components/AddForProfilePage';
 import ProfileInfo from './components/ProfileInfo';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import CheckoutSlice from './feature/checkout-slice';
 import Checkout from './pages/Checkout';
 
 function ProtectedRoute({ children }){
