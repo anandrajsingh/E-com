@@ -9,10 +9,10 @@ import { updatePayment } from "../feature/checkout-slice";
 
 export default function Checkout() {
   
-
+  
   return (
     <Container>
-      
+
     </Container>
   )
 }
